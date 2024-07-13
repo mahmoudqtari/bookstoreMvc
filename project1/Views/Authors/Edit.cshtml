@@ -1,0 +1,21 @@
+﻿@using project1.ViewModels
+@model AuthorVm
+@section Title {
+Author
+}
+@section SubTitle {
+Edit
+}
+
+<form asp-controller="Author" asp-action="Edit">
+    <div class="card-body">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input type="text" class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary"> Update </button>
+    </div>
+</form>
